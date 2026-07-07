@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Vanilla backup — not part of the Next.js app
+    "_vanilla_backup/**",
   ]),
 ]);
 

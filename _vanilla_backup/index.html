@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xornettis Solutions | Next-Gen Enterprise Software & IT Consulting</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Xornettis Solutions delivers elite enterprise software development, cloud computing migrations, cyber defense architectures, and AI consulting services. Start your digital evolution today.">
+    <meta name="keywords" content="Enterprise Software, Cloud Computing, Cybersecurity, AI Development, Digital Transformation, IT Consulting, Xornettis">
+    <meta name="author" content="Xornettis Solutions">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xornettis.com/">
+    <meta property="og:title" content="Xornettis Solutions | Next-Gen Enterprise Software & IT Consulting">
+    <meta property="og:description" content="Elevate your company with elite custom software, robust cloud migration, cybersecurity, and intelligent data systems from Xornettis Solutions.">
+    <meta property="og:image" content="https://xornettis.com/assets/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://xornettis.com/">
+    <meta property="twitter:title" content="Xornettis Solutions | Next-Gen Enterprise Software & IT Consulting">
+    <meta property="twitter:description" content="Elevate your company with elite custom software, robust cloud migration, cybersecurity, and intelligent data systems from Xornettis Solutions.">
+    <meta property="twitter:image" content="https://xornettis.com/assets/og-image.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#hero" class="logo" id="nav-logo">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect x="6" y="6" width="24" height="24" rx="6" stroke="url(#logo-grad)" stroke-width="2.5" />
+                    <path d="M12 12L24 24M24 12L12 24" stroke="url(#logo-grad)" stroke-width="3" stroke-linecap="round" />
+                    <defs>
+                        <linearGradient id="logo-grad" x1="6" y1="6" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#00f2fe" />
+                            <stop offset="1" stop-color="#8a3ffc" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>XORNETTIS</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#why-us" class="nav-link">Why Us</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-primary btn-nav">Get a Quote</a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-bg">
+                <div class="glow-orb orb-1"></div>
+                <div class="glow-orb orb-2"></div>
+                <canvas id="hero-particles" class="hero-canvas"></canvas>
+            </div>
+            
+            <div class="container hero-content">
+                <div class="hero-badge animate-fade-in">
+                    <span>⚡ Enterprise Grade Solutions</span>
+                </div>
+                <h1 class="hero-title animate-fade-in-up">
+                    Architecting the Future of <span class="gradient-text">Digital Enterprise</span>
+                </h1>
+                <p class="hero-subtitle animate-fade-in-up-delay">
+                    Xornettis Solutions designs and deploys hyper-scalable cloud architectures, custom software pipelines, high-security code frameworks, and adaptive AI systems.
+                </p>
+                <div class="hero-actions animate-fade-in-up-delay-2">
+                    <a href="#contact" class="btn btn-primary btn-lg">Launch Project</a>
+                    <a href="#services" class="btn btn-secondary btn-lg">Explore Capabilities</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Strip -->
+        <section class="tech-strip" id="tech-strip">
+            <div class="ticker-wrap">
+                <div class="ticker">
+                    <div class="ticker-item">
+                        <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        <span>React Framework</span>
+                    </div>
+                    <div class="ticker-item">
+                        <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                        <span>Node.js Engine</span>
+                    </div>
+                    <div class="ticker-item">
+                        <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <span>Kubernetes Orchestration</span>
+                    </div>
+                    <div class="ticker-item">
+                        <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+                        <span>Python & AI models</span>
+                    </div>
+                    <div class="ticker-item">
+                        <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"/></svg>
+                        <span>AWS Cloud Solutions</span>
+                    </div>
+                    <div class="ticker-item">
+                        <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+                        <span>Next.js Static Generation</span>
+                    </div>
+                </div>
+                <!-- Duplicate ticker for infinite loop effect -->
+                <div class="ticker" aria-hidden="true">
+                    <div class="ticker-item">
+                        <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        <span>React Framework</span>
+                    </div>
+                    <div class="ticker-item">
+                        <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                        <span>Node.js Engine</span>
+                    </div>
+                    <div class="ticker-item">
+                        <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <span>Kubernetes Orchestration</span>
+                    </div>
+                    <div class="ticker-item">
+                        <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+                        <span>Python & AI models</span>
+                    </div>
+                    <div class="ticker-item">
+                        <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"/></svg>
+                        <span>AWS Cloud Solutions</span>
+                    </div>
+                    <div class="ticker-item">
+                        <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+                        <span>Next.js Static Generation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Xornettis Section -->
+        <section class="why-us" id="why-us">
+            <div class="container">
+                <div class="section-header">
+                    <span class="sub-title">CORE ADVANTAGES</span>
+                    <h2 class="section-title">Why Global Brands Partner with Us</h2>
+                    <p class="section-desc">We combine raw engineering horsepower with rigorous architecture methods to build systems that stand the test of scale and security.</p>
+                </div>
+
+                <div class="why-grid">
+                    <div class="why-card">
+                        <div class="card-icon-wrap">
+                            <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="url(#why-grad-1)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><defs><linearGradient id="why-grad-1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00f2fe"/><stop offset="1" stop-color="#4facfe"/></linearGradient></defs></svg>
+                        </div>
+                        <h3>Zero-Trust Security</h3>
+                        <p>Every line of code and cloud component is hardened with enterprise-level security protocols, ensuring maximum resistance to vector threats.</p>
+                    </div>
+
+                    <div class="why-card">
+                        <div class="card-icon-wrap">
+                            <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="url(#why-grad-2)" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/><defs><linearGradient id="why-grad-2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8a3ffc"/><stop offset="1" stop-color="#b624ff"/></linearGradient></defs></svg>
+                        </div>
+                        <h3>Elite Tech Talent</h3>
+                        <p>Our team consists of veteran senior software developers, certified cloud architects, and security specialists from across the globe.</p>
+                    </div>
+
+                    <div class="why-card">
+                        <div class="card-icon-wrap">
+                            <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="url(#why-grad-3)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/><defs><linearGradient id="why-grad-3" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00f2fe"/><stop offset="1" stop-color="#8a3ffc"/></linearGradient></defs></svg>
+                        </div>
+                        <h3>Agile Execution</h3>
+                        <p>Rapid sprints, clear communication, and high-frequency deployment cycles mean you see product evolution weekly, not quarterly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <span class="sub-title">OUR SPECIALIZATIONS</span>
+                    <h2 class="section-title">End-to-End Engineering</h2>
+                    <p class="section-desc">We engineer performant architectures, dynamic web applications, and safe cloud infrastructure customized to your business goals.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <article class="service-card">
+                        <div class="service-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        </div>
+                        <h3>Enterprise Software</h3>
+                        <p>Bespoke software platforms constructed with robust microservices, real-time database interfaces, and highly responsive frontends.</p>
+                        <ul class="service-features">
+                            <li>Custom Web Systems</li>
+                            <li>High-Throughput APIs</li>
+                            <li>Real-Time Analytics</li>
+                        </ul>
+                    </article>
+
+                    <!-- Service 2 -->
+                    <article class="service-card">
+                        <div class="service-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                        </div>
+                        <h3>Cloud Engineering</h3>
+                        <p>Fully compliant transitions to AWS, GCP, and Azure with serverless frameworks, auto-scaling architectures, and cost containment strategies.</p>
+                        <ul class="service-features">
+                            <li>Multi-Cloud Migration</li>
+                            <li>Infrastructure as Code (IaC)</li>
+                            <li>CI/CD Automation</li>
+                        </ul>
+                    </article>
+
+                    <!-- Service 3 -->
+                    <article class="service-card">
+                        <div class="service-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        </div>
+                        <h3>Cyber Shield & Audits</h3>
+                        <p>Dynamic penetration testing, vulnerability reporting, regulatory compliance audits, and custom data protection structures.</p>
+                        <ul class="service-features">
+                            <li>Penetration Testing</li>
+                            <li>Security Auditing</li>
+                            <li>GDPR & HIPAA Compliance</li>
+                        </ul>
+                    </article>
+
+                    <!-- Service 4 -->
+                    <article class="service-card">
+                        <div class="service-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                        </div>
+                        <h3>AI & Intelligent Ops</h3>
+                        <p>Integrating tailored Large Language Models, cognitive data parsers, and custom machine learning pipelines directly into business processes.</p>
+                        <ul class="service-features">
+                            <li>LLM Fine-Tuning</li>
+                            <li>Predictive Modeling</li>
+                            <li>Process Automation</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <span class="sub-title">CASE STUDIES</span>
+                    <h2 class="section-title">Proven Implementations</h2>
+                    <p class="section-desc">Explore a selection of recent enterprise applications successfully architected and shipped by our engineering teams.</p>
+                </div>
+
+                <div class="portfolio-grid">
+                    <!-- Project 1 -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-media">
+                            <div class="portfolio-gradient-bg bg-project-1"></div>
+                            <div class="portfolio-overlay">
+                                <h3>Fintech Transaction Gateway</h3>
+                                <p>Rebuilt a core transactions database routing 20k+ orders per second with absolute compliance and zero down-time.</p>
+                                <div class="portfolio-tags">
+                                    <span>Golang</span>
+                                    <span>AWS ECS</span>
+                                    <span>PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="project-category">FINTECH & SECURITY</span>
+                            <h4>Enterprise Ledger Platform Migration</h4>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-media">
+                            <div class="portfolio-gradient-bg bg-project-2"></div>
+                            <div class="portfolio-overlay">
+                                <h3>Logistics Routing Engine</h3>
+                                <p>Applied graph algorithms and machine learning forecasts to scale distribution patterns, saving 14% on transit overhead.</p>
+                                <div class="portfolio-tags">
+                                    <span>Python</span>
+                                    <span>PyTorch</span>
+                                    <span>FastAPI</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="project-category">ARTIFICIAL INTELLIGENCE</span>
+                            <h4>AI-Driven Predictive Logistics</h4>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-media">
+                            <div class="portfolio-gradient-bg bg-project-3"></div>
+                            <div class="portfolio-overlay">
+                                <h3>Health Portal Interface</h3>
+                                <p>Created a HIPAA-compliant medical records storage network linking three regional hospital clinics securely.</p>
+                                <div class="portfolio-tags">
+                                    <span>React</span>
+                                    <span>Rust API</span>
+                                    <span>Docker</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="project-category">HEALTHCARE</span>
+                            <h4>Patient Portal & Security Vault</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats" id="stats">
+            <div class="container stats-grid">
+                <div class="stat-card">
+                    <div class="stat-num" data-target="99.99">0</div>
+                    <div class="stat-label">System Uptime SLA</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num" data-target="150">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num" data-target="30">0</div>
+                    <div class="stat-label">Senior Architects</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num" data-target="50">0</div>
+                    <div class="stat-label">M+ Transactions Routed</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <span class="sub-title">CLIENT REFLECTIONS</span>
+                    <h2 class="section-title">Trusted by Tech Leaders</h2>
+                    <p class="section-desc">Discover what CTOs and Founders say about partnering with Xornettis Solutions.</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Xornettis Solutions completely revamped our cloud structure. We went from recurrent deployment outages to perfect stability during our holiday traffic spikes. Their engineering skill is unmatched."</p>
+                        <div class="client-info">
+                            <div class="client-avatar">MH</div>
+                            <div>
+                                <h4 class="client-name">Marcus Howell</h4>
+                                <span class="client-role">CTO, Apex Retail Group</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Their cybersecurity audit identified critical flaws in our user authorization modules that two other teams missed. The custom firewall patches they built are rock-solid. A stellar partner."</p>
+                        <div class="client-info">
+                            <div class="client-avatar">SL</div>
+                            <div>
+                                <h4 class="client-name">Sarah Lang</h4>
+                                <span class="client-role">Head of Product, SecureHealth</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lead Capture Form Section -->
+        <section class="contact" id="contact">
+            <div class="container contact-container">
+                <div class="contact-info">
+                    <span class="sub-title">CONNECT WITH US</span>
+                    <h2>Let's Engineer Your Vision</h2>
+                    <p>Have a custom application to build, cloud services to migrate, or systems to audit? Drop us a line. Our architects respond within one business day.</p>
+                    
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <span>architects@xornettis.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span>+1 (800) 555-XORN</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrap">
+                    <form class="contact-form" id="lead-form">
+                        <div class="form-group">
+                            <label for="client-name">Full Name</label>
+                            <input type="text" id="client-name" name="name" required placeholder="Jane Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="client-email">Work Email</label>
+                            <input type="email" id="client-email" name="email" required placeholder="jane@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="project-type">Project Requirement</label>
+                            <select id="project-type" name="project_type">
+                                <option value="software">Enterprise Software Development</option>
+                                <option value="cloud">Cloud Migration & Infrastructure</option>
+                                <option value="cybersecurity">Security Auditing & Shielding</option>
+                                <option value="ai">AI Implementation & Consulting</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="client-message">Brief Project Summary</label>
+                            <textarea id="client-message" name="message" rows="4" required placeholder="Tell us about the project goals, expected scale, and timeline..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">Send Project Brief</button>
+                        
+                        <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#hero" class="logo">
+                    <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect x="6" y="6" width="24" height="24" rx="6" stroke="url(#footer-logo-grad)" stroke-width="2.5" />
+                        <path d="M12 12L24 24M24 12L12 24" stroke="url(#footer-logo-grad)" stroke-width="3" stroke-linecap="round" />
+                        <defs>
+                            <linearGradient id="footer-logo-grad" x1="6" y1="6" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#00f2fe" />
+                                <stop offset="1" stop-color="#8a3ffc" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span>XORNETTIS</span>
+                </a>
+                <p>Architecting secure, scale-invariant software frameworks and digital environments for global enterprise leaders.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Services</h4>
+                <a href="#services">Enterprise Software</a>
+                <a href="#services">Cloud Engineering</a>
+                <a href="#services">Security Auditing</a>
+                <a href="#services">AI Operations</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="#why-us">Why Us</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Receive our quarterly tech bulletin on architecture design patterns and zero-trust engineering insights.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="bulletin@domain.com" required aria-label="Newsletter email input">
+                    <button type="submit" aria-label="Subscribe to newsletter">➔</button>
+                </form>
+                <div id="newsletter-feedback" class="newsletter-feedback" aria-live="polite"></div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Xornettis Solutions. All rights reserved. Built to endure.</p>
+            <div class="footer-socials">
+                <a href="#" aria-label="LinkedIn Profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="social-icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="#" aria-label="GitHub Profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="social-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+                <a href="#" aria-label="Twitter Profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="social-icon"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Widget -->
+    <a href="https://wa.me/18005559676?text=Hi%20Xornettis%20Solutions!%20I'd%20like%20to%20discuss%20a%20software%20project." 
+       class="whatsapp-widget" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Chat with Xornettis Solutions on WhatsApp">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.859-4.407 9.862-9.843.002-2.633-1.02-5.107-2.877-6.968C16.599 1.933 14.12 .91 11.488.91 6.05 .91 1.628 5.316 1.625 10.75c-.001 1.696.446 3.35 1.295 4.817L1.87 20.312l4.777-1.158zm12.308-5.378c-.31-.156-1.836-.906-2.122-1.01-.286-.104-.495-.156-.704.156-.21.312-.81.1.01-1.03.22-.224.26-.416.156-.726-.104-.31-.417-1.002-.572-1.373-.15-.36-.312-.31-.428-.316-.11-.005-.236-.006-.363-.006-.127 0-.334.047-.509.238-.175.19-.667.652-.667 1.59 0 .937.683 1.84.778 1.97.095.129 1.343 2.052 3.255 2.878.455.197.81.315 1.087.403.458.146.874.125 1.203.076.367-.054 1.13-.462 1.288-.908.158-.445.158-.826.11-.908-.047-.08-.175-.127-.485-.283z"/>
+        </svg>
+    </a>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
