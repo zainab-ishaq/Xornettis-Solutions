@@ -26,9 +26,10 @@ export async function runConsultation(
     recommendations
   );
 
+  // Sahi Order: Pehle 'report' (BusinessReport) aur phir 'lead' (BusinessProfile)
   const crmLead = formatCRMLead(
-    lead,
-    report
+    report,
+    lead
   );
 
   return {
