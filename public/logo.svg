@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-label="Xornettis Solutions logo">
+  <!-- Background rounded square -->
+  <rect width="64" height="64" rx="14" fill="url(#grad)" />
+
+  <!-- X glyph — left diagonal stroke -->
+  <line x1="14" y1="14" x2="50" y2="50" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  <!-- X glyph — right diagonal stroke -->
+  <line x1="50" y1="14" x2="14" y2="50" stroke="white" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- S glyph — top arc -->
+  <path d="M36 22 Q44 20 44 28 Q44 35 32 35 Q20 35 20 43 Q20 50 36 50"
+        stroke="url(#accentGrad)" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Gradient definitions -->
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="20" y1="22" x2="44" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+</svg>
