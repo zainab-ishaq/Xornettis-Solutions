@@ -1,5 +1,5 @@
 import { BusinessReport } from "./reportGenerator";
-import { LeadInformation } from "./types";
+
 export interface CRMLead {
   name: string;
   company: string;
@@ -23,20 +23,21 @@ export interface CRMLead {
 
   createdAt: string;
 }
-export function formatCRMLead(
-  lead: LeadInformation,
-  report: BusinessReport
-): CRMLead {
-  
-  return {
-    name: lead.name ?? "",
-    company: lead.company ?? "",
-    email: lead.email ?? "",
-    phone: lead.phone ?? "",
-    country: lead.country ?? "",
 
-    businessType: lead.businessType ?? "",
-    industry: lead.industry ?? "",
+// Humne yahan 'lead: any' ko ba-toor doosra parameter add kar diya hai
+export function formatCRMLead(
+  report: BusinessReport,
+  lead: any 
+): CRMLead {
+  return {
+    name: lead?.name ?? "",
+    company: lead?.company ?? "",
+    email: lead?.email ?? "",
+    phone: lead?.phone ?? "",
+    country: lead?.country ?? "",
+
+    businessType: lead?.businessType ?? "",
+    industry: lead?.industry ?? "",
 
     aiReadiness: report.analysis.aiReadiness,
     maturity: report.analysis.maturity,
