@@ -1,10 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
+// Vercel me variable name 'RESEND_API_key' hai, isliye hum wahi check kar rahe hain
+const apiKey = process.env.RESEND_API_key || process.env.RESEND_API_key;
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = apiKey ? new Resend(apiKey) : null;
 
 export async function POST(req: NextRequest) {
+  if (!resend) {
+    return NextResponse.json(
+      { error: "Resend API key is missing. Please configure it in your environment variables." },
+      { status: 500 }
+    );
+  }
+
   try {
     const body = await req.json();
     const { name, email, message, company, service } = body;
@@ -17,37 +26,25 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    
     const { data, error } = await resend.emails.send({
-  from: "Xornettis Contact <onboarding@resend.dev>",
-  to: "zainabmirza124@gmail.com",
-
-  // Visitor ke email par direct reply karne ke liye
-  replyTo: email,
-
-  subject: `New Lead from Xornettis: ${name}`,
-
-  html: `
-    <h2>📩 New Contact Form Submission</h2>
-
-    <hr>
-
-    <p><strong>Name:</strong> ${name}</p>
-    <p><strong>Email:</strong> ${email}</p>
-    <p><strong>Company:</strong> ${company || "N/A"}</p>
-    <p><strong>Service:</strong> ${service || "Not Specified"}</p>
-
-    <br>
-
-    <p><strong>Message:</strong></p>
-
-    <p>${message}</p>
-
-    <hr>
-
-    <p>This email was sent from the Xornettis Contact Form.</p>
-  `,
-});
+      from: "Xornettis Contact <onboarding@resend.dev>",
+      to: "zainabmirza124@gmail.com",
+      replyTo: email, // Visitor ke email par direct reply karne ke liye
+      subject: `New Lead from Xornettis: ${name}`,
+      html: `
+        <h2>📩 New Contact Form Submission</h2>
+        <hr>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Company:</strong> ${company || "N/A"}</p>
+        <p><strong>Service:</strong> ${service || "Not Specified"}</p>
+        <br>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+        <hr>
+        <p>This email was sent from the Xornettis Contact Form.</p>
+      `,
+    });
 
     if (error) {
       console.error("Resend Error:", error);
