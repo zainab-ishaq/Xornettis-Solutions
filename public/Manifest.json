@@ -1,0 +1,16 @@
+{
+  "name": "Xornettis Solutions",
+  "short_name": "Xornettis",
+  "description": "AI, Automation, Software Development and Digital Transformation",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

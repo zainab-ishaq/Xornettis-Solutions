@@ -1,6 +1,6 @@
 "use client";
 
-import Reveal from "./Reveal";
+
 import { motion } from "framer-motion";
 import {
   Search,
@@ -46,7 +46,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <Reveal>
+    
       <section id="process" className="bg-white py-24">
         <div className="mx-auto max-w-7xl px-6">
 
@@ -109,6 +109,6 @@ export default function Process() {
 
         </div>
       </section>
-    </Reveal>
+    
   );
 }

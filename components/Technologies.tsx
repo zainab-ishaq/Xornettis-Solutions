@@ -1,6 +1,5 @@
 "use client";
 
-import Reveal from "./Reveal";
 import { motion } from "framer-motion";
 import {
   Code2,
@@ -58,11 +57,11 @@ const technologies = [
 
 export default function Technologies() {
   return (
-    <Reveal>
+    <>
       <section id="technologies"></section>
+
       <section className="bg-slate-50 py-24">
         <div className="mx-auto max-w-7xl px-6">
-
           <div className="mb-16 text-center">
             <span className="font-semibold tracking-wide text-blue-600">
               TECHNOLOGIES
@@ -114,9 +113,8 @@ export default function Technologies() {
               );
             })}
           </div>
-
         </div>
       </section>
-    </Reveal>
+    </>
   );
 }

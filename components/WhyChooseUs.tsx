@@ -1,6 +1,5 @@
 "use client";
 
-import Reveal from "./Reveal";
 import { motion } from "framer-motion";
 import {
   ShieldCheck,
@@ -34,7 +33,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <Reveal>
+    
       <section
         id="why-choose-us"
         className="bg-slate-50 py-24"
@@ -101,6 +100,6 @@ export default function WhyChooseUs() {
 
         </div>
       </section>
-    </Reveal>
+    
   );
 }

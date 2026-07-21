@@ -15,6 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://xornettis-solutions.vercel.app"),
 
+  alternates: {
+  canonical: "https://xornettis-solutions.vercel.app",
+},
+
   title: {
     default: "Xornettis Solutions",
     template: "%s | Xornettis Solutions",

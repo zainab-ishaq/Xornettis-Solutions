@@ -1,6 +1,5 @@
 "use client";
 
-import Reveal from "./Reveal";
 import {
   Bot,
   Code2,
@@ -51,51 +50,49 @@ const services = [
 
 export default function Services() {
   return (
-    <Reveal>
-      <section id="services" className="py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center mb-16">
-            <span className="font-semibold text-blue-600">
-              OUR SERVICES
-            </span>
+    <section id="services" className="py-24 bg-white">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="text-center mb-16">
+          <span className="font-semibold text-blue-600">
+            OUR SERVICES
+          </span>
 
-            <h2 className="mt-4 text-4xl font-bold">
-              Digital Solutions That Drive Growth
-            </h2>
+          <h2 className="mt-4 text-4xl font-bold">
+            Digital Solutions That Drive Growth
+          </h2>
 
-            <p className="mx-auto mt-5 max-w-3xl text-gray-600">
-              We provide AI-powered digital solutions that help businesses
-              innovate, automate and scale with confidence.
-            </p>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => {
-              const Icon = service.icon;
-
-              return (
-                <div
-                  key={service.title}
-                  className="rounded-2xl border bg-gray-50 p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl"
-                >
-                  <Icon
-                    size={44}
-                    className="mb-6 text-blue-600"
-                  />
-
-                  <h3 className="mb-4 text-2xl font-semibold">
-                    {service.title}
-                  </h3>
-
-                  <p className="text-gray-600">
-                    {service.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
+          <p className="mx-auto mt-5 max-w-3xl text-gray-600">
+            We provide AI-powered digital solutions that help businesses
+            innovate, automate and scale with confidence.
+          </p>
         </div>
-      </section>
-    </Reveal>
+
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {services.map((service) => {
+            const Icon = service.icon;
+
+            return (
+              <div
+                key={service.title}
+                className="rounded-2xl border bg-gray-50 p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl"
+              >
+                <Icon
+                  size={44}
+                  className="mb-6 text-blue-600"
+                />
+
+                <h3 className="mb-4 text-2xl font-semibold">
+                  {service.title}
+                </h3>
+
+                <p className="text-gray-600">
+                  {service.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
   );
 }
