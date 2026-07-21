@@ -3,23 +3,15 @@ import { MetadataRoute } from 'next';
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://xornettis-solutions.vercel.app';
 
-  // Base routes / sections based on your main navigation
-  const routes = [
-    '',
-    '/#about',
-    '/#services',
-    '/#solutions',
-    '/#process',
-    '/#portfolio',
-    '/#contact',
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
+  // Sirf main homepage ka URL (Hash tags '#about' wagera sitemap me nahi dale jaate)
+  const mainRoute = {
+    url: baseUrl,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1.0 : 0.8,
-  }));
+    priority: 1.0,
+  };
 
-  // Generic/Dynamic routes if you have separate pages for services, portfolio or case studies in future
+  // Baqi dynamic pages
   const dynamicPages = [
     '/services/ai-solutions',
     '/services/software-development',
@@ -37,5 +29,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  return [...routes, ...dynamicPages];
+  return [mainRoute, ...dynamicPages];
 }
