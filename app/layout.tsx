@@ -27,14 +27,11 @@ export const metadata: Metadata = {
   description:
     "Xornettis Solutions helps businesses grow through Artificial Intelligence, Business Automation, Software Development, Cloud Solutions and Digital Transformation.",
 
-  // Tab Icon / Favicon Configuration (Fixes "Create Next App" logo)
+  // Tab Icon / Favicon Configuration (Updated to work perfectly with icon.ts / icon.tsx)
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon.png", type: "image/png" },
-    ],
-    shortcut: "/favicon.ico",
-    apple: "/apple-icon.png",
+    icon: "/icon",
+    shortcut: "/icon",
+    apple: "/icon",
   },
 
   keywords: [
