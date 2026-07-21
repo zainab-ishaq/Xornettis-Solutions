@@ -16,16 +16,26 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://xornettis-solutions.vercel.app"),
 
   alternates: {
-  canonical: "https://xornettis-solutions.vercel.app",
-},
+    canonical: "https://xornettis-solutions.vercel.app",
+  },
 
   title: {
-    default: "Xornettis Solutions",
+    default: "Xornettis Solutions | AI & Digital Transformation",
     template: "%s | Xornettis Solutions",
   },
 
   description:
     "Xornettis Solutions helps businesses grow through Artificial Intelligence, Business Automation, Software Development, Cloud Solutions and Digital Transformation.",
+
+  // Tab Icon / Favicon Configuration (Fixes "Create Next App" logo)
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
 
   keywords: [
     "Xornettis Solutions",
