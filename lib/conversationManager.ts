@@ -7,6 +7,7 @@ export interface ConversationState {
   started: boolean;
   answers: Record<string, string>;
   lead: BusinessProfile;
+  leadEmailSent: boolean;
 }
 
 export function createConversation(): ConversationState {
@@ -16,10 +17,13 @@ export function createConversation(): ConversationState {
     started: false,
     answers: {},
     lead: {},
+    leadEmailSent: false,
   };
 }
 
-export function getCurrentQuestion(state: ConversationState) {
+export function getCurrentQuestion(
+  state: ConversationState
+) {
   if (state.currentStep >= businessQuestions.length) {
     return null;
   }
@@ -40,13 +44,15 @@ export function saveAnswer(
     };
   }
 
+  const nextStep = state.currentStep + 1;
+
   return {
     ...state,
 
-    currentStep: state.currentStep + 1,
+    currentStep: nextStep,
 
     completed:
-      state.currentStep + 1 >= businessQuestions.length,
+      nextStep >= businessQuestions.length,
 
     answers: {
       ...state.answers,
@@ -69,9 +75,46 @@ export function startConversation(
   };
 }
 
+export function advanceToNextMissingQuestion(
+  state: ConversationState
+): ConversationState {
+  let nextStep = state.currentStep;
+
+  while (nextStep < businessQuestions.length) {
+    const question = businessQuestions[nextStep];
+
+    const value =
+      state.lead[
+        question.field as keyof BusinessProfile
+      ];
+
+    if (
+      typeof value !== "string" ||
+      !value.trim()
+    ) {
+      break;
+    }
+
+    nextStep++;
+  }
+
+  return {
+    ...state,
+
+    currentStep: nextStep,
+
+    completed:
+      nextStep >= businessQuestions.length,
+  };
+}
+
 export function getProgress(
   state: ConversationState
 ): number {
+  if (businessQuestions.length === 0) {
+    return 100;
+  }
+
   return Math.round(
     (state.currentStep / businessQuestions.length) * 100
   );

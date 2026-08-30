@@ -2,72 +2,66 @@ import { BusinessProfile, AnalysisResult, LeadScore } from "./types";
 
 export function calculateLeadScore(
   profile: BusinessProfile,
-  analysis: AnalysisResult
+  analysis?: AnalysisResult
 ): LeadScore {
-
   let score = 0;
 
-  // Business Size
-  switch (profile.businessType) {
+  // 1. Business Type Score
+  switch (profile?.businessType) {
     case "Enterprise":
       score += 30;
       break;
-
     case "Manufacturing":
       score += 25;
       break;
-
     case "E-commerce":
       score += 20;
       break;
-
     case "Small Business":
+    case "Restaurant":
+    case "Education":
       score += 15;
       break;
-
     case "Startup":
+    default:
       score += 10;
       break;
   }
 
-  // Website
-  if (profile.website === "Yes") {
+  // 2. Website Status Score
+  if (profile?.website === "Yes" || profile?.website === "No") {
     score += 10;
   }
 
-  // AI Readiness
-  switch (analysis.aiReadiness) {
-    case "High":
-      score += 25;
-      break;
-
-    case "Medium":
-      score += 15;
-      break;
-
-    case "Low":
-      score += 5;
-      break;
+  // 3. AI Readiness Score (Safe check if analysis exists)
+  const readiness = analysis?.aiReadiness;
+  if (readiness === "High") {
+    score += 25;
+  } else if (readiness === "Medium") {
+    score += 15;
+  } else {
+    score += 5; // Default/Low
   }
 
-  // Timeline
-  if (profile.timeline === "Immediately") {
+  // 4. Timeline Score
+  if (profile?.timeline === "Immediately" || profile?.timeline?.toLowerCase().includes("now")) {
     score += 20;
-  } else if (profile.timeline === "Within 1 Month") {
+  } else if (profile?.timeline?.includes("1 Month") || profile?.timeline?.includes("month")) {
     score += 10;
   }
 
-  // Budget
-  if (profile.budget) {
+  // 5. Budget Score
+  if (profile?.budget) {
     score += 15;
   }
 
+  // Cap score to 100 max
   if (score > 100) {
     score = 100;
   }
 
-  let grade: "A" | "B" | "C";
-  let status: "Hot" | "Warm" | "Cold";
+  let grade: "A" | "B" | "C" = "C";
+  let status: "Hot" | "Warm" | "Cold" = "Cold";
 
   if (score >= 80) {
     grade = "A";
@@ -79,10 +73,11 @@ export function calculateLeadScore(
     grade = "C";
     status = "Cold";
   }
-return {
-  score,
-  grade,
-  status,
-  reason: `${status} lead with score ${score}/100`,
-};
+
+  return {
+    score,
+    grade,
+    status,
+    reason: `${status} lead with score ${score}/100`,
+  };
 }

@@ -7,8 +7,7 @@ import MessageInput from "./MessageInput";
 
 interface ChatWindowProps {
   open: boolean;
-    onClose: () => void;
-
+  onClose: () => void;
 }
 
 interface Message {
@@ -16,9 +15,12 @@ interface Message {
   content: string;
 }
 
-export default function ChatWindow({ open,
-  onClose
- }: ChatWindowProps) {
+export default function ChatWindow({ open, onClose }: ChatWindowProps) {
+  // Generate a unique session ID once per chat session
+  const [sessionId] = useState(
+    () => "user-" + Math.random().toString(36).substring(2, 9)
+  );
+
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
@@ -37,6 +39,7 @@ export default function ChatWindow({ open,
 
     if (!message.trim()) return;
 
+    // Add user message to UI immediately
     setMessages((prev) => [
       ...prev,
       {
@@ -56,11 +59,13 @@ export default function ChatWindow({ open,
         },
         body: JSON.stringify({
           message,
+          sessionId, // Passing the unique session ID
         }),
       });
 
       const data = await res.json();
 
+      // Add assistant response
       setMessages((prev) => [
         ...prev,
         {
@@ -73,8 +78,7 @@ export default function ChatWindow({ open,
         ...prev,
         {
           role: "assistant",
-          content:
-            "Sorry, I couldn't connect to the AI service.",
+          content: "Sorry, I couldn't connect to the AI service.",
         },
       ]);
     }
@@ -84,10 +88,7 @@ export default function ChatWindow({ open,
 
   return (
     <div className="fixed bottom-24 right-6 z-50 flex h-[600px] w-[380px] flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-2xl">
-
-      <ChatHeader
-        onClose={onClose}
- />
+      <ChatHeader onClose={onClose} />
 
       <MessageList
         messages={messages}
@@ -101,7 +102,6 @@ export default function ChatWindow({ open,
         onChange={setInput}
         onSend={() => sendMessage()}
       />
-
     </div>
   );
 }

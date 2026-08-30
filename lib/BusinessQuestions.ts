@@ -22,44 +22,37 @@ export const businessQuestions: BusinessQuestion[] = [
       "Other",
     ],
   },
-
   {
     id: "industry",
     field: "industry",
     question: "Which industry are you in?",
   },
-
   {
     id: "challenge",
     field: "challenge",
     question: "What is your biggest business challenge right now?",
   },
-
   {
     id: "goal",
     field: "goal",
     question: "What would you like to achieve in the next 6–12 months?",
   },
-
   {
     id: "website",
     field: "website",
     question: "Do you currently have a website?",
     options: ["Yes", "No"],
   },
-
   {
     id: "employees",
     field: "employees",
     question: "Approximately how many employees do you have?",
   },
-
   {
     id: "budget",
     field: "budget",
     question: "What is your estimated budget for this project?",
   },
-
   {
     id: "timeline",
     field: "timeline",
@@ -70,5 +63,21 @@ export const businessQuestions: BusinessQuestion[] = [
       "Within 3 Months",
       "Just Exploring",
     ],
+  },
+  // --- Contact & Personal Info Steps (Lead Qualification) ---
+  {
+    id: "name",
+    field: "name",
+    question: "Great! What is your full name?",
+  },
+  {
+    id: "email",
+    field: "email",
+    question: "Please share your email address so we can send you the custom proposal.",
+  },
+  {
+    id: "phone",
+    field: "phone",
+    question: "What is your phone number (WhatsApp preferred)?",
   },
 ];
