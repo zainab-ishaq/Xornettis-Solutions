@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from 'next/script';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { 
@@ -33,7 +34,6 @@ export const metadata: Metadata = {
   description:
     "Xornettis Solutions helps businesses grow through Artificial Intelligence, Business Automation, Software Development, Cloud Solutions and Digital Transformation.",
 
-  // Tab Icon / Favicon Configuration (Updated to work perfectly with icon.ts / icon.tsx)
   icons: {
     icon: "/icon",
     shortcut: "/icon",
@@ -112,6 +112,14 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        {/* Google AdSense Script */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3100149636228107"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+
         {/* Structured Data / Schema Scripts */}
         <script
           type="application/ld+json"
