@@ -53,12 +53,7 @@ export const metadata: Metadata = {
     "AI Consulting",
   ],
 
-  authors: [
-    {
-      name: "Xornettis Solutions",
-    },
-  ],
-
+  authors: [{ name: "Xornettis Solutions" }],
   creator: "Xornettis Solutions",
   publisher: "Xornettis Solutions",
 
@@ -76,8 +71,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: "Xornettis Solutions",
-    description:
-      "Helping businesses grow through AI, Business Automation, Software Development and Digital Transformation.",
+    description: "Helping businesses grow through AI, Business Automation, Software Development and Digital Transformation.",
     url: "https://xornettis-solutions.vercel.app",
     siteName: "Xornettis Solutions",
     locale: "en_US",
@@ -87,8 +81,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Xornettis Solutions",
-    description:
-      "Helping businesses grow through AI, Business Automation, Software Development and Digital Transformation.",
+    description: "Helping businesses grow through AI, Business Automation, Software Development and Digital Transformation.",
   },
 
   verification: {
@@ -112,14 +105,6 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
-        {/* Google AdSense Script */}
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3100149636228107"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
-
         {/* Structured Data / Schema Scripts */}
         <script
           type="application/ld+json"
@@ -140,6 +125,14 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col">
         {children}
+        
+        {/* AdSense Verification Script */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3100149636228107"
+          crossOrigin="anonymous"
+          strategy="beforeInteractive"
+        />
       </body>
     </html>
   );
